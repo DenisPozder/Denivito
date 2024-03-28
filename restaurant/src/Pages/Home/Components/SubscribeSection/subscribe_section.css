@@ -1,0 +1,344 @@
+.subscribe_section {
+    width: 100%;
+    height: auto;
+    padding-top: 4rem;
+}
+
+.ss_content {
+    width: auto;
+    height: auto;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.ss_box {
+    width: 200px;
+    height: 500px;
+    background-color: var(--light_tone);
+    position: relative;
+}
+
+.ss_content_img {
+    position: absolute;
+    top: calc(50% - 30%);
+    left: calc(50% - 15%);
+    transform: translate(-50%, -50%);
+    width: 180px;
+    height: 300px;
+    z-index: 1;
+}
+
+.ss_img_1 {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.ss_content_img_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--light_tone);
+    opacity: .4;
+}
+
+.ss_img_2 {
+    position: absolute;
+    top: calc(50% + 35%);
+    left: calc(50% - 20%);
+    transform: translate(-50%, -50%);
+    width: 280px;
+    height: 200px;
+    z-index: 2;
+    object-fit: cover;
+}
+
+/*----- Subscribe / Register content -----*/
+
+.ss_wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+    background-color: var(--text_color);
+    z-index: 3;
+}
+
+/*----- Star and fork -----*/
+.ss_star_1, .ss_star_2, .ss_fork {
+    position: absolute;
+    top: 0;
+    color: var(--text_color);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ss_star_1 {
+    left: calc(50% - 20%);
+    font-size: 2.4rem;
+    top: -25px;
+}
+
+.ss_fork {
+    font-size: 3rem;
+    top: -30px;
+}
+
+.ss_star_2 {
+    left: calc(50% + 20%);
+    font-size: 2.4rem;
+    top: -25px;
+}
+
+.ss_wrap_content {
+    width: auto;
+    height: auto;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*----- Regsiter and login content -----*/
+
+.ss_wrap_btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+}
+
+.ss_wrap_btns .ss_wrap_btn {
+    border: none;
+    outline: none;
+    width: 120px;
+    height: 35px;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.ss_wrap_btns .ss_wrap_register {
+    background-color: var(--background_color);
+    position: relative;
+    transition: background-color .4s ease;
+}
+
+.ss_wrap_btns .ss_wrap_register:hover {
+    background-color: var(--mid_tone);
+}
+
+.ss_wrap_btns .ss_wrap_register span {
+    color: var(--text_color);
+    transition: color .4s ease;
+    font-weight: bold;
+}
+
+.ss_wrap_btns .ss_wrap_register:hover span {
+    color: var(--background_color);
+}
+
+.ss_wrap_btns .ss_wrap_login {
+    border: 2px solid var(--background_color);
+    background-color: transparent;
+    transition: background-color .4s ease;
+}
+
+.ss_wrap_btns .ss_wrap_login:hover {
+    background-color: var(--background_color);
+}
+
+.ss_wrap_btns .ss_wrap_login span {
+    color: var(--background_color);
+    transition: color .4s ease;
+    font-weight: bold;
+}
+
+.ss_wrap_btns .ss_wrap_login:hover span {
+    color: var(--text_color);
+}
+
+.ss_wrap_title_1 {
+    color: var(--background_color);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.ss_wrap_title_1 span {
+    color: var(--light_tone);
+}
+
+.ss_wrap_par {
+    margin: 1rem 0;
+    color: var(--background_color);
+    text-align: center;
+}
+
+@media only screen and (min-width: 321px) {
+    .ss_content_img {
+        left: calc(50% - 10%);
+        width: 200px;
+        height: 340px;
+    }
+}
+
+@media only screen and (min-width: 376px) {
+    .ss_content_img {
+        left: calc(50% - 5%);
+        width: 200px;
+        height: 340px;
+    }
+
+    .ss_img_2 {
+        top: calc(50% + 35%);
+        left: calc(50% - 20%);
+        transform: translate(-50%, -50%);
+        width: 300px;
+        height: 220px;
+    }
+
+    .ss_wrap_btns {
+        justify-content: center;
+    }
+
+    .ss_wrap_btns .ss_wrap_register {
+        margin-right: 2rem;
+    }
+}
+
+
+@media only screen and (min-width: 426px) {
+    .ss_content_img {
+        left: calc(50% - 5%);
+        top: calc(50% - 25%);
+        width: 220px;
+        height: 380px;
+    }
+
+    .ss_img_2 {
+        top: calc(50% + 35%);
+        left: calc(50% - 20%);
+        transform: translate(-50%, -50%);
+        width: 340px;
+        height: 220px;
+    }
+}
+
+@media only screen and (min-width: 521px) {
+    .subscribe_section {
+        padding-top: 6rem;
+    }
+    
+    .ss_content {
+        margin: 0 40px;
+    }
+
+    .ss_wrap_title_1 {
+        font-size: 1.6rem;
+    }
+
+    .ss_wrap {
+        max-width: 80vw;
+    }
+
+    .ss_content_img {
+        top: calc(50% - 30%);
+        left: calc(50% - 35%);
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: 340px;
+        z-index: 1;
+    }
+
+    .ss_wrap_content {
+        padding: 60px 40px;
+    }
+
+    .ss_img_2 {
+        top: calc(50% + 30%);
+        left: calc(50% - 60%);
+        transform: translate(-50%, -50%);
+        width: 400px;
+        height: 260px;
+        z-index: 2;
+        object-fit: cover;
+    }
+
+    .ss_box {
+        height: 420px;
+    }
+
+    .ss_star_1 {
+        left: calc(50% - 15%);
+        font-size: 3rem;
+        top: -30px;
+    }
+    
+    .ss_fork {
+        font-size: 4rem;
+        top: -36px;
+    }
+    
+    .ss_star_2 {
+        left: calc(50% + 15%);
+        font-size: 3rem;
+        top: -30px;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .ss_content {
+        margin: 0 120px;
+    }
+    
+    .ss_wrap {
+        max-width: 60vw;
+    }
+
+    .ss_wrap_title_1 {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (min-width:1100px) {
+    .ss_content {
+        margin: 0 200px;
+    }
+
+    .ss_wrap {
+        max-width: 640px;
+    }
+
+    .ss_wrap_title_1 {
+        font-size: 2.4rem;
+    }
+
+    .ss_img_2 {
+        top: calc(50% + 15%);
+        left: calc(50% - 70%);
+        width: 600px;
+        height: 420px;
+    }
+
+    .ss_content_img {
+        top: calc(50% - 15%);
+        left: calc(50% - 35%);
+        transform: translate(-50%, -50%);
+        width: 300px;
+        height: 420px;
+        z-index: 1;
+    }
+}
