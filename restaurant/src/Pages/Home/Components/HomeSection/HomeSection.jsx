@@ -13,6 +13,7 @@ const HomeSection = () => {
           <div className="hs_top_img">
             <img className="hs_img_1 parallax" data-speedy="0.06" src="/Assets/Home/HSImg.jpg" alt="Our best meal " />
             <div className="hs_top_img_overlay"></div>
+            <div className="hs_top_img_black"></div>
           </div>
           <div className="hs_top_text parallax" data-speedy="-0.07">
             <div className="hst_text">

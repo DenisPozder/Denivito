@@ -1,8 +1,11 @@
 import React from 'react'
+import Formular from '../../Components/Formular/Formular'
 
 const Register = () => {
   return (
-    <div>Register</div>
+    <div className='page_container'>
+      <Formular />
+    </div>
   )
 }
 
