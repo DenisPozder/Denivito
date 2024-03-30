@@ -35,12 +35,6 @@ const Formular = () => {
                         <input type="text" placeholder="Password" />
                     </div>
                 </div>
-                <div className="fbc_box">
-                    <div className="fbc_wrap">
-                        <RiLockPasswordFill />
-                        <input type="text" placeholder="Repeat Password" />
-                    </div>
-                </div>
                 <button className="submit"><span>register now</span></button>
                 <p className="formular_text">Already have an account? <Link to={'/login'}>Login now!</Link></p>
               </form>
