@@ -251,6 +251,9 @@
 
 .mscb_meal_bottom .mscb_meal_color img {
     opacity: .2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .mscb_meal_bottom .mscb_meal_color .mscb_mc_line {

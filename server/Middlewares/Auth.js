@@ -36,4 +36,14 @@ const Protect = asyncHandler(async(req, res, next) => {
     }
 })
 
-export {generateToken, Protect}
+// @desc Admin middleware
+const Admin = (req, res, next) => {
+    if(req.user && req.user.isAdmin) {
+        next()
+    } else {
+        res.status(401)
+        throw new Error("Not authorized as an admin!")
+    }
+}
+
+export {generateToken, Protect, Admin}
