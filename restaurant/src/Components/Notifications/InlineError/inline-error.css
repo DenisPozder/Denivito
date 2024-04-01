@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 13px
+    height: 20px;
 }
 
 .inline_error p {

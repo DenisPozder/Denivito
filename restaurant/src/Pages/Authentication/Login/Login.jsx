@@ -33,26 +33,26 @@ const Login = () => {
 
   // OnSubmit
   const onSubmit = (data) => {
-    dispatch(loginAction(data))
+    dispatch(loginAction(data));
   };
 
   // UseEffect
   useEffect(() => {
-    if(userInfo?.isAdmin) {
-      navigate('/dashboard')
+    if (userInfo?.isAdmin) {
+      navigate("/dashboard");
     } else if (userInfo) {
-      navigate('/profile')
+      navigate("/profile");
     }
 
-    if(isSuccess) {
-      toast.success(`Welcome back ${userInfo?.userName}`)
+    if (isSuccess) {
+      toast.success(`Welcome back ${userInfo?.userName}`);
     }
 
-    if(isError) {
-      toast.error(isError)
-      dispatch({ type: "USER_LOGIN_RESET" })
+    if (isError) {
+      toast.error(isError);
+      dispatch({ type: "USER_LOGIN_RESET" });
     }
-  },[userInfo, isSuccess, isError, navigate, dispatch])
+  }, [userInfo, isSuccess, isError, navigate, dispatch]);
 
   return (
     <div className="page_container">
@@ -60,32 +60,42 @@ const Login = () => {
         <FormHeader title={"Denivito"} text={"Login for exclusive access"} />
         <div className="form">
           <form action="" onSubmit={handleSubmit(onSubmit)}>
-            <div className="full">
-              <span>
-                {errors.email ? <InlineError text={errors.email.message} /> : <div className="form_space"></div>}
-              </span>
-              <Input
-                icon={<MdEmail />}
-                name={"email"}
-                register={register("email")}
-                type={"email"}
-                placeholder={"Email"}
-              />
-            </div>
-            <div className="full">
-              <span>
-                {errors.password ? <InlineError text={errors.password.message} /> : <div className="form_space"></div>}
-              </span>
-              <Input
-                icon={<RiLockPasswordFill />}
-                name={"password"}
-                register={register("password")}
-                type={"password"}
-                placeholder={"Password"}
-              />
+            <div className="form_inputs">
+              <div className="full">
+                <span>
+                  {errors.email ? (
+                    <InlineError text={errors.email.message} />
+                  ) : (
+                    <div className="form_space"></div>
+                  )}
+                </span>
+                <Input
+                  icon={<MdEmail />}
+                  name={"email"}
+                  register={register("email")}
+                  type={"email"}
+                  placeholder={"Email"}
+                />
+              </div>
+              <div className="full">
+                <span>
+                  {errors.password ? (
+                    <InlineError text={errors.password.message} />
+                  ) : (
+                    <div className="form_space"></div>
+                  )}
+                </span>
+                <Input
+                  icon={<RiLockPasswordFill />}
+                  name={"password"}
+                  register={register("password")}
+                  type={"password"}
+                  placeholder={"Password"}
+                />
+              </div>
             </div>
             <button disabled={isLoading} type="submit" className="submit">
-              <span>{isLoading ? ('Loading...') : ("login now")}</span>
+              <span>{isLoading ? "Loading..." : "login now"}</span>
             </button>
             <p className="form_text">
               Dont have an account yet?{" "}

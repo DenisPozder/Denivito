@@ -143,17 +143,33 @@
     border: none;
     outline: none;
     cursor: pointer;
+    transition: background-color .4s ease;
+}
+
+.sc_logout:hover {
+    background-color: var(--background_color);
 }
 
 .sc_logout svg {
     font-size: 1.8rem;
     padding: 10px;
+    color: var(--background_color);
+    transition: color .4s ease;
+}
+
+.sc_logout:hover svg {
+    color: var(--text_color);
 }
 
 .sc_logout span {
     padding: 10px;
     text-transform: uppercase;
     color: var(--background_color);
+    transition: color .4s ease;
+}
+
+.sc_logout:hover span {
+    color: var(--text_color);
 }
 
 .sc_sidebar_wrap .sc_link {
@@ -165,7 +181,6 @@
     text-decoration: none;
     margin-bottom: .5rem;
     transition: color .4s ease;
-    padding: 5px;
     border-radius: 10px;
     box-shadow: 0 4px 4px -2px rgba(0,0,0,0.3);
     transition: background-color .4s ease;
@@ -187,6 +202,7 @@
     font-size: 1.8rem;
     color: var(--background_color);
     transition: color .4s ease;
+    padding: 10px;
 }
 
 .sc_sidebar_wrap .sc_link:hover svg {
@@ -249,5 +265,64 @@
 .sc_toggle .sc_bars {
     font-size: 1.8rem;
     padding: 10px;
+}
+
+@media only screen and (min-width: 769px) {
+    .sidebar_content {
+        padding: 20px;
+    }
+
+    .sc_toggle {
+        display: none;
+    }
+
+    .sc_sidebar {
+        margin-right: 2rem;
+        width: 440px;
+    }
+
+    .sc_sidebar_wrap {
+        position: relative !important;
+        opacity: 1;
+        transform: translateY(0);
+        width: 100%;
+        height: auto;
+        transition: none;
+        pointer-events: all;
+    }
+
+    .sc_close {
+        display: none;
+    }
+
+    .sc_sidebar_wrap .sc_link {
+        width: 100%;
+        background-color: var(--text_color);
+        box-shadow: none;
+    }
+
+    .sc_logout {
+        position: relative;
+        width: 100%;
+        padding: 0;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: transparent;
+        box-shadow: none;
+        background-color: var(--text_color);
+    }
+
+    .sc_sidebar_header {
+        margin-bottom: 2rem;
+    }
+
+    .sidebar_content {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
 }
 
