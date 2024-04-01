@@ -1,0 +1,103 @@
+.form_box {
+    width: 100%;
+    height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fb_content {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 90vh;
+    justify-content: flex-start;
+    border-radius: 40px;
+    box-shadow: 0 30px 20px -5px rgba(71,52,23,0.2);
+    border: 2px solid rgba(250,250,250,0.4);
+    width: 100%;
+}
+
+/*----- Form box with all inputs and labels -----*/
+.fb_wrap {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fb_inner {
+    width: 100%;
+    height: 95%;
+    background-color: var(--text_color);
+    margin: 0 10px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+/*----- Form img as a background -----*/
+.fb_img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 40px;
+}
+
+.fb_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media only screen and (min-width: 521px) {
+    .fb_content {
+        margin: 0 40px;
+    }
+
+    .fb_wrap {
+        width: 60%;
+    }
+
+    .fb_inner {
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .fb_content {
+        margin: 0 120px;
+        max-height: 600px;
+    }
+
+    .fb_wrap {
+        width: 60%;
+    }
+
+    .fb_inner {
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .fb_content {
+        margin: 0 200px;
+        max-height: 600px;
+    }
+
+    .fb_wrap {
+        width: 45%;
+    }
+
+    .fb_inner {
+        margin-left: 20px;
+    }
+}

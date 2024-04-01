@@ -1,6 +1,5 @@
 import React from "react";
 import "./about_section.css";
-import Logo from "../../../../Components/Logo/Logo";
 import { Link } from "react-router-dom";
 
 const AboutSection = () => {

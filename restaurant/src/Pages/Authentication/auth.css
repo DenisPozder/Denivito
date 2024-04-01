@@ -1,0 +1,92 @@
+.form {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.form form {
+    margin: 0 10px;
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.full {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form_space {
+    width: 100%;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px
+}
+
+.submit {
+    width: 100%;
+    height: 45px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: var(--light_tone);
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.submit span {
+    color: var(--text_color);
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.submit::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 0%;
+    background-color: var(--mid_tone);
+    border-radius: 20px;
+    transition: height .4s ease;
+}
+
+.submit:hover::after {
+    height: 100%;
+}
+
+.form_text {
+    text-align: center;
+    color: var(--light_tone);
+    font-weight: bold;
+}
+
+.form_text a {
+    color: var(--mid_tone);
+}
+
+@media only screen and (min-width: 521px) {
+    .submit {
+        width: 240px;
+    }
+
+    .form form {
+        margin: 0 20px;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .form form {
+        margin: 0 40px;
+    }
+}

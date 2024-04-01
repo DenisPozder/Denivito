@@ -1,0 +1,32 @@
+.input {
+    width: 100%;
+    height: auto;
+    background-color: var(--text_color);
+    border: 1px solid var(--light_tone);
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+}
+
+.input_wrap {
+    margin: 0 10px;
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input_wrap svg {
+    font-size: 1.2rem !important;
+    color: var(--mid_tone);
+}
+
+.input_wrap input {
+    height: 30px;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
