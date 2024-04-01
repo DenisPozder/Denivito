@@ -13,6 +13,8 @@ import FavoritesMeals from "./Pages/Dashboard/FavoritesMeals/FavoritesMeals";
 import Dashboard from "./Pages/Dashboard/Admin/Dashboard/Dashboard";
 import MealList from "./Pages/Dashboard/Admin/MealList/MealList";
 import AddMeal from "./Pages/Dashboard/Admin/AddMeal/AddMeal";
+import Categories from "./Pages/Dashboard/Admin/Categories/Categories";
+import Users from "./Pages/Dashboard/Admin/Users/Users";
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
         <Route path="/password" element={<Password />} />
         <Route path="/favorites" element={<FavoritesMeals />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/categories" element={<Categories />} />
+        <Route path="/users" element={<Users />} />
         <Route path="/meal-list" element={<MealList />} />
         <Route path="/add-meal" element={<AddMeal />} />
       </Routes>

@@ -167,7 +167,12 @@
     transition: color .4s ease;
     padding: 5px;
     border-radius: 10px;
-    box-shadow: 0 4px 4px -2px rgba(0,0,0,0.6);
+    box-shadow: 0 4px 4px -2px rgba(0,0,0,0.3);
+    transition: background-color .4s ease;
+}
+
+.sc_sidebar_wrap .sc_link:hover {
+    background-color: var(--background_color);
 }
 
 .sc_sidebar_wrap .sc_link.active {
@@ -185,7 +190,7 @@
 }
 
 .sc_sidebar_wrap .sc_link:hover svg {
-    color: var(--sidebar_color);
+    color: var(--text_color);
 }
 
 .sc_sidebar_wrap .sc_link.active svg {
