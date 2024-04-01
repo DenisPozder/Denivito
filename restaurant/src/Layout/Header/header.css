@@ -115,6 +115,11 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    position: relative;
 }
 
 .header_media_content .header_medias .header_media:nth-child(1) {
@@ -127,7 +132,7 @@
 
 .header_media_content .header_medias .header_media svg {
     color: var(--light_tone);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     transition: color .4s ease, transform .4s ease;
 }
 

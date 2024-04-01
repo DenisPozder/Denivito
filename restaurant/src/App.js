@@ -7,6 +7,12 @@ import NotFound from "./Pages/NotFound/NotFound";
 import Login from "./Pages/Authentication/Login/Login";
 import Register from "./Pages/Authentication/Register/Register";
 import ToastContainer from "./Components/Notifications/ToastContainer/ToastContainer";
+import Profile from "./Pages/Dashboard/Profile/Profile";
+import Password from "./Pages/Dashboard/Password/Password";
+import FavoritesMeals from "./Pages/Dashboard/FavoritesMeals/FavoritesMeals";
+import Dashboard from "./Pages/Dashboard/Admin/Dashboard/Dashboard";
+import MealList from "./Pages/Dashboard/Admin/MealList/MealList";
+import AddMeal from "./Pages/Dashboard/Admin/AddMeal/AddMeal";
 
 function App() {
   return (
@@ -20,6 +26,12 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/password" element={<Password />} />
+        <Route path="/favorites" element={<FavoritesMeals />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/meal-list" element={<MealList />} />
+        <Route path="/add-meal" element={<AddMeal />} />
       </Routes>
     </>
   );

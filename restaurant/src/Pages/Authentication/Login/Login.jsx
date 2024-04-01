@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import FormBox from "../Components/FormBox/FormBox";
 import FormHeader from "../Components/FormHeader/FormHeader";
 import { Link, useNavigate } from "react-router-dom";
-import { FaUser } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
 import Input from "../Components/Input/Input";

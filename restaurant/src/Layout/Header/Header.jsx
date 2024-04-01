@@ -3,10 +3,14 @@ import "./header.css";
 import Logo from "../../Components/Logo/Logo";
 import HeaderLinksData from "../../Data/HeaderLinksData";
 import { Link, NavLink } from "react-router-dom";
-import { FaSquareInstagram, FaSquareTwitter } from "react-icons/fa6";
-import { FaFacebookSquare } from "react-icons/fa";
+import { FaSquareInstagram, FaHeart } from "react-icons/fa6";
+import { FaUser } from "react-icons/fa";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  
+  const {userInfo} = useSelector((state) => state.userLogin)
+
   const [scrolled, setScrolled] = useState(false);
 
   const scrolledHeader = () => {
@@ -46,24 +50,22 @@ const Header = () => {
               <Link
                 target="_blank"
                 to={"#"}
-                className="header_media header_instagram"
+                className="header_media"
               >
                 <FaSquareInstagram />
               </Link>
               <Link
-                target="_blank"
-                to={"#"}
-                className="header_media header_instagram"
+                to={ userInfo?.isAdmin ? "/dashboard" : userInfo ? "/profile" : "/login" }
+                className="header_media"
               >
-                <FaSquareTwitter />
+                <FaUser />
               </Link>
-              <Link
-                target="_blank"
+              <button
                 to={"#"}
-                className="header_media header_instagram"
+                className="header_media"
               >
-                <FaFacebookSquare />
-              </Link>
+                <FaHeart />
+              </button>
             </div>
             <Link className="header_call" to="#">
               <span>0600142498</span>

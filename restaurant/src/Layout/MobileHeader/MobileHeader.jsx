@@ -2,12 +2,15 @@ import React, { useEffect, useState } from 'react'
 import Logo from '../../Components/Logo/Logo'
 import './mobile-header.css'
 import { Link, NavLink } from 'react-router-dom'
-import { FaBars, FaSquareInstagram, FaSquareTwitter } from "react-icons/fa6";
-import { FaRegWindowClose, FaFacebookSquare } from "react-icons/fa";
+import { FaBars, FaSquareInstagram, FaHeart } from "react-icons/fa6";
+import { FaRegWindowClose, FaUser } from "react-icons/fa";
 import HeaderLinksData from '../../Data/HeaderLinksData';
 import { GiKnifeFork } from "react-icons/gi";
+import { useSelector } from 'react-redux';
 
 const MobileHeader = () => {
+
+    const {userInfo} = useSelector((state) => state.userLogin)
 
     const [toggle, setToggle] = useState(false)
     const [scrolled, setScrolled] = useState(false)
@@ -60,8 +63,8 @@ const MobileHeader = () => {
                     </div>
                     <div className="mh_media">
                         <Link target='_blank' to={'#'} className='mh_media_link'><FaSquareInstagram /></Link>
-                        <Link target='_blank' to={'#'} className='mh_media_link'><FaSquareTwitter /></Link>
-                        <Link target='_blank' to={'#'} className='mh_media_link'><FaFacebookSquare /></Link>
+                        <Link to={userInfo?.isAdmin ? "/dashboard" : userInfo ? "/profile" : "/login"} className='mh_media_link'><FaUser /></Link>
+                        <button className='mh_media_link'><FaHeart /></button>
                     </div>
                 </div>
             </div>
