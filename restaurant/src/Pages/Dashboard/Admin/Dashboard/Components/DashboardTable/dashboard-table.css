@@ -1,0 +1,11 @@
+.dashboard_table {
+    width: 100%;
+    height: auto;
+}
+
+.dashboard_table h1 {
+    text-transform: uppercase;
+    color: var(--background_color);
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
