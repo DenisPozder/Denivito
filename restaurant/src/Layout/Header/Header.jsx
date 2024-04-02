@@ -56,16 +56,18 @@ const Header = () => {
               </Link>
               <Link
                 to={ userInfo?.isAdmin ? "/dashboard" : userInfo ? "/profile" : "/login" }
-                className="header_media"
+                className="header_media header_user"
               >
-                <FaUser />
+                {
+                  userInfo ? (<img src={userInfo?.image ? userInfo?.image : "/Assets/UserImg.png"} alt={userInfo?.userName} />) : (<FaUser />)
+                }
               </Link>
-              <button
-                to={"#"}
+              <Link
+                to={"/favorites"}
                 className="header_media"
               >
                 <FaHeart />
-              </button>
+              </Link>
             </div>
             <Link className="header_call" to="#">
               <span>0600142498</span>

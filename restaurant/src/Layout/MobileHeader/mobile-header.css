@@ -368,6 +368,19 @@
     position: relative;
 }
 
+.mh_media .mh_media_link.mh_media_user {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--text_color);
+}
+
+.mh_media .mh_media_link.mh_media_user img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .mh_media .mh_media_link:hover {
     color: var(--background_color);
 }
