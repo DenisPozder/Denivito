@@ -26,7 +26,7 @@
     transform: translateX(-50%);
     width: 80%;
     height: 1px;
-    background-color: var(--text_color);
+    background-color: var(--background_color);
     content: '';
     z-index: 1;
 }
@@ -43,7 +43,7 @@
 .dashboard_circle {
     width: 48px;
     height: 48px;
-    background-color: var(--text_color);
+    background-color: var(--background_color);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -52,7 +52,7 @@
 
 .dashboard_circle svg {
     font-size: 1.8rem;
-    color: var(--background_color);
+    color: var(--text_color);
 }
 
 .dashboard_text {
@@ -63,7 +63,7 @@
 
 .dashboard_text p {
     text-transform: uppercase;
-    color: var(--background_color);
+    color: var(--text_color);
     font-weight: bold;
     margin-bottom: 1rem;
 }

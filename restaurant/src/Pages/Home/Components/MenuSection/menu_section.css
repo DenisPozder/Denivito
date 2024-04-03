@@ -162,14 +162,14 @@
     height: 380px;
     position: relative;
     text-decoration: none;
-    background-color: var(--background_color);
+    background-color: var(--sidebar_color);
     overflow: hidden;
 }
 
 .mscb_meal_icon {
     width: 100px;
     height: 100px;
-    background: radial-gradient(circle at center, var(--background_color) -20%, var(--mid_tone), var(--light_tone) 100%);
+    background: radial-gradient(circle at center, var(--text_color) -20%, var(--mid_tone), var(--light_tone) 100%);
     position: absolute;
     top: calc(50% + 5%);
     left: 50%;

@@ -15,6 +15,7 @@ import { TbLogout2 } from "react-icons/tb";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutAction } from "../../../Redux/Actions/UserActions";
 import toast from "react-hot-toast";
+import Layout from "../../../Layout/Layout";
 
 const Sidebar = ({ children }) => {
   const dispatch = useDispatch();
@@ -76,11 +77,6 @@ const Sidebar = ({ children }) => {
           link: "/favorites",
           icon: <FaHeart />,
         },
-        {
-          title: "Change password",
-          link: "/password",
-          icon: <RiLockPasswordFill />,
-        },
       ]
     : userInfo
     ? [
@@ -93,11 +89,6 @@ const Sidebar = ({ children }) => {
           title: "Favorite meals",
           link: "/favorites",
           icon: <FaHeart />,
-        },
-        {
-          title: "Change password",
-          link: "/password",
-          icon: <RiLockPasswordFill />,
         },
       ]
     : [];

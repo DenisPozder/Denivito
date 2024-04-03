@@ -2,8 +2,10 @@
     width: 100%;
     height: 100%;
     min-height: 100vh;
-    background-color: var(--text_color);
+    background-color: var(--background_color);
     overflow: hidden;
+    max-width: 1520px;
+    margin: 0 auto;
 }
 
 .sidebar_content {
@@ -58,30 +60,30 @@
 }
 
 .sc_sidebar_header .sc_header_link:hover {
-    background-color: var(--background_color);
+    background-color: var(--text_color);
 }
 
 .sc_sidebar_header .sc_header_link svg {
     font-size: 1.8rem;
     padding: 10px;
-    color: var(--background_color);
+    color: var(--text_color);
     transition: color .4s ease;
 }
 
 .sc_sidebar_header .sc_header_link:hover svg {
-    color: var(--text_color);
+    color: var(--sidebar_color);
 }
 
 .sc_sidebar_header .sc_header_link span {
     text-transform: uppercase;
     font-size: .9rem;
     padding: 10px;
-    color: var(--background_color);
+    color: var(--text_color);
     transition: color .4s ease;
 }
 
 .sc_sidebar_header .sc_header_link:hover span {
-    color: var(--text_color);
+    color: var(--sidebar_color);
 }
 
 /*----- Sidebar links -----*/
@@ -100,6 +102,7 @@
     pointer-events: none;
     opacity: 0;
     transition: transform .4s ease, opacity .4s ease;
+    z-index: 9999;
 }
 
 .sc_sidebar_wrap.show {
@@ -147,29 +150,29 @@
 }
 
 .sc_logout:hover {
-    background-color: var(--background_color);
+    background-color: var(--text_color);
 }
 
 .sc_logout svg {
     font-size: 1.8rem;
     padding: 10px;
-    color: var(--background_color);
+    color: var(--text_color);
     transition: color .4s ease;
 }
 
 .sc_logout:hover svg {
-    color: var(--text_color);
+    color: var(--sidebar_color);
 }
 
 .sc_logout span {
     padding: 10px;
     text-transform: uppercase;
-    color: var(--background_color);
+    color: var(--text_color);
     transition: color .4s ease;
 }
 
 .sc_logout:hover span {
-    color: var(--text_color);
+    color: var(--sidebar_color);
 }
 
 .sc_sidebar_wrap .sc_link {
@@ -187,11 +190,11 @@
 }
 
 .sc_sidebar_wrap .sc_link:hover {
-    background-color: var(--background_color);
+    background-color: var(--text_color);
 }
 
 .sc_sidebar_wrap .sc_link.active {
-    background-color: var(--background_color);
+    background-color: var(--text_color);
 }
 
 .sc_sidebar_wrap .sc_link:last-child {
@@ -200,31 +203,31 @@
 
 .sc_sidebar_wrap .sc_link svg {
     font-size: 1.8rem;
-    color: var(--background_color);
+    color: var(--text_color);
     transition: color .4s ease;
     padding: 10px;
 }
 
 .sc_sidebar_wrap .sc_link:hover svg {
-    color: var(--text_color);
+    color: var(--sidebar_color);
 }
 
 .sc_sidebar_wrap .sc_link.active svg {
-    color: var(--text_color);
+    color: var(--sidebar_color);
 }
 
 .sc_sidebar_wrap .sc_link span {
     padding: 10px;
     text-transform: uppercase;
-    color: var(--background_color);
+    color: var(--text_color);
 }
 
 .sc_sidebar_wrap .sc_link:hover span {
-    color: var(--text_color);
+    color: var(--sidebar_color);
 }
 
 .sc_sidebar_wrap .sc_link.active span {
-    color: var(--text_color);
+    color: var(--sidebar_color);
 }
 
 /*----- Sidebar {children} for all pages -----*/
@@ -296,7 +299,7 @@
 
     .sc_sidebar_wrap .sc_link {
         width: 100%;
-        background-color: var(--text_color);
+        background-color: var(--background_color);
         box-shadow: none;
     }
 
@@ -311,7 +314,7 @@
         justify-content: space-between;
         background-color: transparent;
         box-shadow: none;
-        background-color: var(--text_color);
+        background-color: var(--background_color);
     }
 
     .sc_sidebar_header {

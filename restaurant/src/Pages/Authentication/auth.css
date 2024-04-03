@@ -55,7 +55,7 @@
 }
 
 .submit span {
-    color: var(--text_color);
+    color: var(--background_color);
     text-transform: uppercase;
     z-index: 2;
 }

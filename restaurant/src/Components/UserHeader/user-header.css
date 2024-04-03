@@ -6,6 +6,6 @@
 .user_header h1 {
     font-size: 1.6rem;
     text-transform: uppercase;
-    color: var(--background_color);
+    color: var(--text_color);
     margin-bottom: calc(2rem + 20px);
 }

@@ -28,5 +28,19 @@
     padding: 5px;
     border: none;
     outline: none;
+    background-color: transparent !important;
+    color: var(--light_tone);
+}
+
+.input_wrap input:-webkit-autofill {
+    background-color: transparent !important;
+}
+
+.input_wrap input::autofill {
+    background-color: transparent !important;
+}
+
+.input_wrap input::placeholder {
+    color: var(--sidebar_color);
     background-color: transparent;
 }

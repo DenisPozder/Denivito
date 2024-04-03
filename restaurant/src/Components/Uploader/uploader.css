@@ -1,0 +1,29 @@
+.uploader {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-direction: column;
+    background-color: var(--background_color);
+    border-radius: 10px;
+}
+
+.uploader .uploader_icon {
+    font-size: 2rem;
+    color: var(--text_color);
+    padding: 10px;
+}
+
+.uploader .uploader_text {
+    text-transform: uppercase;
+    color: var(--text_color);
+    margin: 1rem 0;
+}
+
+.uploader .uploader_drop {
+    padding: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}

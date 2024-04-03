@@ -14,7 +14,7 @@
 }
 
 .header.scrolled .header_wrapper {
-    background-color: var(--background_color);
+    background-color: var(--sidebar_color);
     box-shadow: 0 6px 4px -2px rgba(0,0,0,0.4);
 }
 

@@ -5,7 +5,7 @@
 
 .dashboard_table h1 {
     text-transform: uppercase;
-    color: var(--background_color);
+    color: var(--text_color);
     font-size: 1.6rem;
     margin-bottom: 2rem;
 }

@@ -21,6 +21,7 @@ const Input = ({
           value={value}
           onChange={onChange}
           {...register}
+          autoComplete="off"
         />
       </div>
     </div>
