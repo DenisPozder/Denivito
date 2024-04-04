@@ -66,10 +66,28 @@ const deleteProfileAction = () => async (dispatch, getState) => {
   }
 };
 
+// Change password action
+const changePasswordAction = (passwords) => async (dispatch, getState) => {
+  try {
+    dispatch({ type: UserConstants.USER_CHANGE_PASSWORD_REQUEST });
+    const response = await UserAPI.changePasswordService(
+      passwords,
+      tokenProtection(getState)
+    );
+    dispatch({
+      type: UserConstants.USER_CHANGE_PASSWORD_SUCCESS,
+      payload: response,
+    });
+  } catch (error) {
+    ErrorsAction(error, dispatch, UserConstants.USER_CHANGE_PASSWORD_FAIL);
+  }
+};
+
 export {
   loginAction,
   registerAction,
   logoutAction,
   updateProfileAction,
   deleteProfileAction,
+  changePasswordAction,
 };

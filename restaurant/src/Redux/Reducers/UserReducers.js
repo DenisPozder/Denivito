@@ -65,3 +65,23 @@ export const userDeleteProfileReducer = (state = {}, action) => {
       return state;
   }
 };
+
+// CHANGE PASSWORD
+export const userChangePasswordReducer = (state = {}, action) => {
+  switch (action.type) {
+    case UserConstants.USER_CHANGE_PASSWORD_REQUEST:
+      return { isLoading: true };
+    case UserConstants.USER_CHANGE_PASSWORD_SUCCESS:
+      return {
+        isLoading: false,
+        isSuccess: true,
+        message: action.payload.message,
+      };
+    case UserConstants.USER_CHANGE_PASSWORD_FAIL:
+      return { isLoading: false, isError: action.payload };
+    case UserConstants.USER_CHANGE_PASSWORD_RESET:
+      return {};
+    default:
+      return state;
+  }
+};
