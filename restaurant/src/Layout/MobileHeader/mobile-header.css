@@ -89,7 +89,7 @@
 /*----- Mobile header menu -----*/
 .mobile_header .mh_wrap {
     width: 100%;
-    height: 100vh;
+    height: 100svh;
     position: fixed;
     top: 0;
     display: flex;
