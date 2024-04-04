@@ -5,6 +5,7 @@ import { GiKnifeFork } from "react-icons/gi";
 import { Link } from "react-router-dom";
 
 const SubscribeSection = () => {
+
   return (
     <div className="subscribe_section">
       <div className="ss_content">
@@ -40,10 +41,10 @@ const SubscribeSection = () => {
               elevate your dining experience.
             </p>
             <div className="ss_wrap_btns">
-              <Link to={'/register'} className="ss_wrap_register ss_wrap_btn">
+              <Link to={"/register"} className="ss_wrap_register ss_wrap_btn">
                 <span>register</span>
               </Link>
-              <Link to={'/login'} className="ss_wrap_login ss_wrap_btn">
+              <Link to={"/login"} className="ss_wrap_login ss_wrap_btn">
                 <span>login</span>
               </Link>
             </div>

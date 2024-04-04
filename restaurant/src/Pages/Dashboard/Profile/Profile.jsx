@@ -8,6 +8,7 @@ const Profile = () => {
     <Sidebar>
       <UserHeader title={"update profile"} />
       <ProfileForm />
+      <UserHeader title={"change password"} />
     </Sidebar>
   )
 }

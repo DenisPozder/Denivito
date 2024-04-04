@@ -1,6 +1,7 @@
 import * as UserConstants from "../Constants/UserConstants";
 import * as UserAPI from "../APIs/UserServices";
-import { ErrorsAction } from "../Protection";
+import { ErrorsAction, tokenProtection } from "../Protection";
+import toast from "react-hot-toast";
 
 // Login action
 const loginAction = (datas) => async (dispatch) => {
@@ -33,4 +34,42 @@ const logoutAction = () => (dispatch) => {
   dispatch({ type: UserConstants.USER_REGISTER_RESET });
 };
 
-export { loginAction, registerAction, logoutAction };
+// User update action
+const updateProfileAction = (user) => async (dispatch, getState) => {
+  try {
+    dispatch({ type: UserConstants.USER_UPDATE_PROFILE_REQUEST });
+    const response = await UserAPI.updateProfileService(
+      user,
+      tokenProtection(getState)
+    );
+    dispatch({
+      type: UserConstants.USER_UPDATE_PROFILE_SUCCESS,
+      payload: response,
+    });
+    toast.success("Profile Updated");
+    dispatch({ type: UserConstants.USER_LOGIN_SUCCESS, payload: response });
+  } catch (error) {
+    ErrorsAction(error, dispatch, UserConstants.USER_UPDATE_PROFILE_FAIL);
+  }
+};
+
+// Delete profile action
+const deleteProfileAction = () => async (dispatch, getState) => {
+  try {
+    dispatch({ type: UserConstants.USER_DELETE_PROFILE_REQUEST });
+    await UserAPI.deleteProfileService(tokenProtection(getState));
+    dispatch({ type: UserConstants.USER_DELETE_PROFILE_SUCCESS });
+    toast.success("Profile Deleted");
+    dispatch(logoutAction());
+  } catch (error) {
+    ErrorsAction(error, dispatch, UserConstants.USER_DELETE_PROFILE_FAIL);
+  }
+};
+
+export {
+  loginAction,
+  registerAction,
+  logoutAction,
+  updateProfileAction,
+  deleteProfileAction,
+};

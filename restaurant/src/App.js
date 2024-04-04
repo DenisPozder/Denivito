@@ -14,12 +14,14 @@ import MealList from "./Pages/Dashboard/Admin/MealList/MealList";
 import AddMeal from "./Pages/Dashboard/Admin/AddMeal/AddMeal";
 import Categories from "./Pages/Dashboard/Admin/Categories/Categories";
 import Users from "./Pages/Dashboard/Admin/Users/Users";
+import { AdminProtectionRouter, ProtectedRouter } from "./ProtectedRouter";
 
 function App() {
   return (
     <>
       <ToastContainer />
       <Routes>
+        {/*----- Public Routes -----*/}
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/menu" element={<Menu />} />
@@ -27,13 +29,19 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/favorites" element={<FavoritesMeals />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/categories" element={<Categories />} />
-        <Route path="/users" element={<Users />} />
-        <Route path="/meal-list" element={<MealList />} />
-        <Route path="/add-meal" element={<AddMeal />} />
+        {/*----- Private Routes -----*/}
+        <Route element={<ProtectedRouter />}>
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/favorites" element={<FavoritesMeals />} />
+        </Route>
+        {/*----- Admin Routes -----*/}
+        <Route element={<AdminProtectionRouter />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/categories" element={<Categories />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/meal-list" element={<MealList />} />
+          <Route path="/add-meal" element={<AddMeal />} />
+        </Route>
       </Routes>
     </>
   );
