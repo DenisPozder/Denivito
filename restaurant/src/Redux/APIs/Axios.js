@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const Axios = axios.create({
-    baseURL: "https://denivito-api-wine.vercel.app/"
+    baseURL: "https://denivito-api.vercel.app/api"
 })
 
 export default Axios
