@@ -11,16 +11,7 @@ import UploadRouter from './Controllers/UploadFile.js'
 dotenv.config()
 
 const app = express()
-
-const corsConfig = {
-    origin: '*',
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true,
-}
-
-app.options("", cors(corsConfig))
-app.use(cors(corsConfig))
+app.use(cors())
 app.use(express.json())
 
 // Connect DB
