@@ -12,7 +12,7 @@ dotenv.config()
 
 const app = express()
 app.use(cors({
-    origin: "https://denivito-ten.vercel.app",
+    origin: ["https://denivito-ten.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }))
